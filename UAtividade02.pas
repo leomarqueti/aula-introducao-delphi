@@ -47,8 +47,7 @@ end;
 
 procedure TfrmAtividade02.btn_resultadoClick(Sender: TObject);
 var
-  n1, n2, resultado : Integer;
-  n1_float,n2_float, resultado_float : Double;
+  n1, n2, resultado : Real;
   sinal: String;
 begin
   n1 := StrToInt(edt_vlr_1.Text);
@@ -57,18 +56,17 @@ begin
 
   if (sinal = '+') then
     resultado := n1 + n2;
-    lbl_resultado.Caption := IntToStr(resultado);
+    lbl_resultado.Caption := FloatToStr(resultado);
   if (sinal = '-') then
     resultado := n1 - n2;
-    lbl_resultado.Caption := IntToStr(resultado);
+    lbl_resultado.Caption := FloatToStr(resultado);
   if (sinal = '*') then
     resultado := n1 * n2;
-    lbl_resultado.Caption := IntToStr(resultado);
+    lbl_resultado.Caption := FloatToStr(resultado);
   if (sinal = '/') then
-    n1_float := n1;
-    n2_float := n2;
-    resultado_float := n1_float / n2_float;
-    lbl_resultado.Caption := IntToStr(resultado);
+
+    resultado := n1 / n2;
+    lbl_resultado.Caption := FloatToStr(resultado);
 
 
 end;
