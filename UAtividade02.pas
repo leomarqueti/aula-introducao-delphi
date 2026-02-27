@@ -17,11 +17,14 @@ type
     btn_multiplicar: TButton;
     btn_dividir: TButton;
     btn_resultado: TButton;
+    btn_1: TButton;
+    btn_2: TButton;
     procedure btn_somarClick(Sender: TObject);
     procedure btn_resultadoClick(Sender: TObject);
     procedure btn_subtrairClick(Sender: TObject);
     procedure btn_multiplicarClick(Sender: TObject);
     procedure btn_dividirClick(Sender: TObject);
+    procedure btn_1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -34,6 +37,12 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TfrmAtividade02.btn_1Click(Sender: TObject);
+
+begin
+  edt_vlr_1.Text := IntToStr(1);
+end;
 
 procedure TfrmAtividade02.btn_dividirClick(Sender: TObject);
 begin

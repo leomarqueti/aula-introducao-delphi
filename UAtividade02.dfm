@@ -2,7 +2,7 @@ object frmAtividade02: TfrmAtividade02
   Left = 0
   Top = 0
   Caption = 'Atividade 2'
-  ClientHeight = 441
+  ClientHeight = 657
   ClientWidth = 624
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -39,9 +39,9 @@ object frmAtividade02: TfrmAtividade02
   end
   object btn_somar: TButton
     Left = 8
-    Top = 256
+    Top = 252
     Width = 129
-    Height = 57
+    Height = 65
     Caption = '+'
     TabOrder = 2
     OnClick = btn_somarClick
@@ -81,5 +81,22 @@ object frmAtividade02: TfrmAtividade02
     Caption = '='
     TabOrder = 6
     OnClick = btn_resultadoClick
+  end
+  object btn_1: TButton
+    Left = 8
+    Top = 352
+    Width = 97
+    Height = 73
+    Caption = '1'
+    TabOrder = 7
+    OnClick = btn_1Click
+  end
+  object btn_2: TButton
+    Left = 152
+    Top = 352
+    Width = 97
+    Height = 73
+    Caption = '2'
+    TabOrder = 8
   end
 end
