@@ -19,12 +19,14 @@ type
     btn_resultado: TButton;
     btn_1: TButton;
     btn_2: TButton;
+    btn_3: TButton;
     procedure btn_somarClick(Sender: TObject);
     procedure btn_resultadoClick(Sender: TObject);
     procedure btn_subtrairClick(Sender: TObject);
     procedure btn_multiplicarClick(Sender: TObject);
     procedure btn_dividirClick(Sender: TObject);
     procedure btn_1Click(Sender: TObject);
+    procedure btn_2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -39,9 +41,30 @@ implementation
 {$R *.dfm}
 
 procedure TfrmAtividade02.btn_1Click(Sender: TObject);
-
 begin
-  edt_vlr_1.Text := IntToStr(1);
+  if (lbl_sinal.Caption = '') then
+  begin
+    edt_vlr_1.Text := edt_vlr_1.Text + IntToStr(1);
+  end
+  else
+  begin
+    edt_vlr_2.Text :=  edt_vlr_2.Text + IntToStr(1);
+  end;
+
+
+end;
+
+procedure TfrmAtividade02.btn_2Click(Sender: TObject);
+begin
+  if (lbl_sinal.Caption = '') then
+  begin
+    edt_vlr_1.Text := edt_vlr_1.Text + IntToStr(2);
+  end
+  else
+  begin
+    edt_vlr_2.Text :=  edt_vlr_2.Text + IntToStr(2);
+  end;
+
 end;
 
 procedure TfrmAtividade02.btn_dividirClick(Sender: TObject);

@@ -98,5 +98,14 @@ object frmAtividade02: TfrmAtividade02
     Height = 73
     Caption = '2'
     TabOrder = 8
+    OnClick = btn_2Click
+  end
+  object btn_3: TButton
+    Left = 280
+    Top = 352
+    Width = 129
+    Height = 73
+    Caption = '3'
+    TabOrder = 9
   end
 end
