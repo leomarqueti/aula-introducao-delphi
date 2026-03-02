@@ -14,7 +14,7 @@ object frmPrincipal: TfrmPrincipal
   TextHeight = 30
   object btnExemplo01: TButton
     Left = 8
-    Top = 24
+    Top = 65
     Width = 150
     Height = 35
     Caption = 'Exemplo01'
@@ -22,8 +22,8 @@ object frmPrincipal: TfrmPrincipal
     OnClick = btnExemplo01Click
   end
   object btnAtividade01: TButton
-    Left = 164
-    Top = 24
+    Left = 396
+    Top = 65
     Width = 150
     Height = 35
     Caption = 'Atividade 1'
@@ -31,8 +31,8 @@ object frmPrincipal: TfrmPrincipal
     OnClick = btnAtividade01Click
   end
   object btnExemplo02: TButton
-    Left = 328
-    Top = 24
+    Left = 8
+    Top = 113
     Width = 153
     Height = 35
     Caption = 'Exemplo02'
@@ -40,8 +40,8 @@ object frmPrincipal: TfrmPrincipal
     OnClick = btnExemplo02Click
   end
   object btnAtividade02: TButton
-    Left = 8
-    Top = 80
+    Left = 264
+    Top = 184
     Width = 150
     Height = 33
     Caption = 'Atividade 2'
