@@ -12,10 +12,6 @@ type
     lbl_sinal: TLabel;
     edt_vlr_1: TEdit;
     edt_vlr_2: TEdit;
-    btn_somar: TButton;
-    btn_subtrair: TButton;
-    btn_multiplicar: TButton;
-    btn_dividir: TButton;
     btn_resultado: TButton;
     btn_1: TButton;
     btn_2: TButton;
@@ -28,11 +24,15 @@ type
     btn_9: TButton;
     btn_0: TButton;
     btn_apagar: TButton;
-    procedure btn_somarClick(Sender: TObject);
+    sp_somar: TShape;
+    btn_cor_somar: TSpeedButton;
+    sp_subtrair: TShape;
+    btn_cor_multiplicar: TSpeedButton;
+    sp_multiplicar: TShape;
+    sp_dividir: TShape;
+    btn_cor_subtrair: TSpeedButton;
+    btn_cor_dividir: TSpeedButton;
     procedure btn_resultadoClick(Sender: TObject);
-    procedure btn_subtrairClick(Sender: TObject);
-    procedure btn_multiplicarClick(Sender: TObject);
-    procedure btn_dividirClick(Sender: TObject);
     procedure btn_1Click(Sender: TObject);
     procedure btn_2Click(Sender: TObject);
     procedure btn_3Click(Sender: TObject);
@@ -44,7 +44,10 @@ type
     procedure btn_9Click(Sender: TObject);
     procedure btn_0Click(Sender: TObject);
     procedure btn_apagarClick(Sender: TObject);
-    procedure btn_color_somarClick(Sender: TObject);
+    procedure btn_cor_somarClick(Sender: TObject);
+    procedure btn_cor_multiplicarClick(Sender: TObject);
+    procedure btn_cor_subtrairClick(Sender: TObject);
+    procedure btn_cor_dividirClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -156,34 +159,32 @@ begin
   lbl_resultado.Caption := '';
 end;
 
-procedure TfrmAtividade02.btn_color_somarClick(Sender: TObject);
+
+procedure TfrmAtividade02.btn_cor_dividirClick(Sender: TObject);
+begin
+     lbl_sinal.Caption := '/';
+end;
+
+procedure TfrmAtividade02.btn_cor_multiplicarClick(Sender: TObject);
+begin
+   lbl_sinal.Caption := '-';
+end;
+
+procedure TfrmAtividade02.btn_cor_somarClick(Sender: TObject);
 begin
    lbl_sinal.Caption := '+';
 end;
 
-procedure TfrmAtividade02.btn_dividirClick(Sender: TObject);
+procedure TfrmAtividade02.btn_cor_subtrairClick(Sender: TObject);
 begin
-    lbl_sinal.Caption := '/';
+   lbl_sinal.Caption := '*';
 end;
 
-procedure TfrmAtividade02.btn_multiplicarClick(Sender: TObject);
-begin
-    lbl_sinal.Caption := '*';
-end;
 
 procedure TfrmAtividade02.btn_resultadoClick(Sender: TObject);
 begin
   Calcular(edt_vlr_1.Text,edt_vlr_2.Text)
 end;
 
-procedure TfrmAtividade02.btn_somarClick(Sender: TObject);
-begin
-  lbl_sinal.Caption := '+';
-end;
-
-procedure TfrmAtividade02.btn_subtrairClick(Sender: TObject);
-begin
-  lbl_sinal.Caption := '-';
-end;
 
 end.
