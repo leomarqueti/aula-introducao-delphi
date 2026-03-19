@@ -3,7 +3,7 @@ object frmAtividade03: TfrmAtividade03
   Top = 0
   Caption = 'Atividade 26'
   ClientHeight = 299
-  ClientWidth = 698
+  ClientWidth = 782
   Color = 2565927
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -51,26 +51,27 @@ object frmAtividade03: TfrmAtividade03
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object Shape1: TShape
-    Left = 376
+  object shp_exibe: TShape
+    Left = 424
     Top = 133
     Width = 265
     Height = 46
     Brush.Color = clYellow
     Pen.Style = psClear
   end
-  object SpeedButton1: TSpeedButton
-    Left = 376
+  object btn_exibe: TSpeedButton
+    Left = 424
     Top = 133
     Width = 265
     Height = 46
     Caption = 'Exibe Idade'
-    OnClick = SpeedButton1Click
+    Flat = True
+    OnClick = btn_exibeClick
   end
   object edt_nome: TEdit
     Left = 144
     Top = 53
-    Width = 497
+    Width = 545
     Height = 46
     TabOrder = 0
   end

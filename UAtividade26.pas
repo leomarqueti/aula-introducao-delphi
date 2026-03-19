@@ -13,9 +13,9 @@ type
     lbl_nome: TLabel;
     lbl_idade: TLabel;
     lbl_texto_final: TLabel;
-    Shape1: TShape;
-    SpeedButton1: TSpeedButton;
-    procedure SpeedButton1Click(Sender: TObject);
+    shp_exibe: TShape;
+    btn_exibe: TSpeedButton;
+    procedure btn_exibeClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -31,7 +31,7 @@ implementation
 
 {$R *.dfm}
 
-procedure TfrmAtividade03.SpeedButton1Click(Sender: TObject);
+procedure TfrmAtividade03.btn_exibeClick(Sender: TObject);
 begin
   nome := edt_nome.Text;
   idade := StrToInt(edt_idade.Text);
