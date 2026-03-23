@@ -151,6 +151,14 @@
             <Form>frmAtividade27</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="UAtividade28.pas">
+            <Form>frmAtividade28</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="UAtividade30.pas">
+            <Form>frmAtividade30</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -172,7 +180,7 @@
                     <Source Name="MainSource">Componentes.dpr</Source>
                 </Source>
             </Delphi.Personality>
-            <Deployment Version="5">
+            <Deployment Version="4">
                 <DeployFile LocalName="Win32\Debug\Componentes.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>Componentes.exe</RemoteName>
@@ -201,6 +209,16 @@
                     </Platform>
                     <Platform Name="Win32">
                         <Operation>0</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidClasses">
+                    <Platform Name="Android">
+                        <RemoteDir>classes</RemoteDir>
+                        <Operation>64</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>classes</RemoteDir>
+                        <Operation>64</Operation>
                     </Platform>
                 </DeployClass>
                 <DeployClass Name="AndroidFileProvider">

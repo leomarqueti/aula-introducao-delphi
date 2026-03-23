@@ -8,10 +8,8 @@ uses
 
 type
   TfrmAtividade02 = class(TForm)
-    lbl_resultado: TLabel;
     lbl_sinal: TLabel;
     edt_vlr_1: TEdit;
-    edt_vlr_2: TEdit;
     btn_resultado: TButton;
     btn_1: TButton;
     btn_2: TButton;
@@ -50,6 +48,7 @@ type
     procedure btn_cor_dividirClick(Sender: TObject);
   private
     { Private declarations }
+    n1, n2 : string;
   public
     { Public declarations }
     procedure Calcular(const numero1: string; const numero2: string);
@@ -75,17 +74,17 @@ begin
 
   if (sinal = '+') then
     resultado := n1 + n2;
-    lbl_resultado.Caption := FloatToStr(resultado);
+    edt_vlr_1.Text := FloatToStr(resultado);
   if (sinal = '-') then
     resultado := n1 - n2;
-    lbl_resultado.Caption := FloatToStr(resultado);
+    edt_vlr_1.Text := FloatToStr(resultado);
   if (sinal = '*') then
     resultado := n1 * n2;
-    lbl_resultado.Caption := FloatToStr(resultado);
+    edt_vlr_1.Text := FloatToStr(resultado);
   if (sinal = '/') then
 
     resultado := n1 / n2;
-    lbl_resultado.Caption := FloatToStr(resultado);
+    edt_vlr_1.Text := FloatToStr(resultado);
 end;
 
 procedure TfrmAtividade02.EnviarNumeroParaLabel(const Valor: string);
@@ -93,10 +92,12 @@ begin
   if (lbl_sinal.Caption = '') then
   begin
     edt_vlr_1.Text := edt_vlr_1.Text + Valor;
+    n1 := n1 + Valor;
   end
   else
   begin
-    edt_vlr_2.Text :=  edt_vlr_2.Text + Valor;
+    edt_vlr_1.Text :=  edt_vlr_1.Text + Valor;
+    n2 := n2 + Valor;
   end;
 end;
 
@@ -154,36 +155,40 @@ end;
 procedure TfrmAtividade02.btn_apagarClick(Sender: TObject);
 begin
   edt_vlr_1.Text := '';
-  edt_vlr_2.Text := '';
   lbl_sinal.Caption := '';
-  lbl_resultado.Caption := '';
+  n1 := '';
+  n2 := '';
 end;
 
 
 procedure TfrmAtividade02.btn_cor_dividirClick(Sender: TObject);
 begin
+      edt_vlr_1.Text := '';
      lbl_sinal.Caption := '/';
 end;
 
 procedure TfrmAtividade02.btn_cor_multiplicarClick(Sender: TObject);
 begin
+    edt_vlr_1.Text := '';
    lbl_sinal.Caption := '-';
 end;
 
 procedure TfrmAtividade02.btn_cor_somarClick(Sender: TObject);
 begin
+  edt_vlr_1.Text := '';
    lbl_sinal.Caption := '+';
 end;
 
 procedure TfrmAtividade02.btn_cor_subtrairClick(Sender: TObject);
 begin
+  edt_vlr_1.Text := '';
    lbl_sinal.Caption := '*';
 end;
 
 
 procedure TfrmAtividade02.btn_resultadoClick(Sender: TObject);
 begin
-  Calcular(edt_vlr_1.Text,edt_vlr_2.Text)
+  Calcular(n1,n2)
 end;
 
 
