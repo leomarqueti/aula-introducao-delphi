@@ -21,6 +21,7 @@ object frmAtividade30: TfrmAtividade30
     Color = 16775156
     ParentBackground = False
     TabOrder = 0
+    ExplicitHeight = 368
     object sp_dados_usuario: TShape
       Left = 41
       Top = 18
@@ -130,7 +131,7 @@ object frmAtividade30: TfrmAtividade30
     object lbl_salario_bruto: TLabel
       Left = 190
       Top = 107
-      Width = 30
+      Width = 5
       Height = 15
       Caption = '-'
       Color = 16775413
@@ -205,7 +206,7 @@ object frmAtividade30: TfrmAtividade30
     object lbl_imposto_renda: TLabel
       Left = 192
       Top = 136
-      Width = 41
+      Width = 5
       Height = 15
       Caption = '-'
       Color = 16775413
@@ -214,7 +215,7 @@ object frmAtividade30: TfrmAtividade30
     object lbl_inss: TLabel
       Left = 193
       Top = 165
-      Width = 32
+      Width = 5
       Height = 15
       Caption = '-'
       Color = 16775413
@@ -223,7 +224,7 @@ object frmAtividade30: TfrmAtividade30
     object lbl_sindicato: TLabel
       Left = 192
       Top = 194
-      Width = 41
+      Width = 5
       Height = 15
       Caption = '-'
       Color = 16775413
@@ -232,7 +233,7 @@ object frmAtividade30: TfrmAtividade30
     object lbl_salario_liquido: TLabel
       Left = 192
       Top = 223
-      Width = 33
+      Width = 5
       Height = 15
       Caption = '-'
       Color = 16775413
