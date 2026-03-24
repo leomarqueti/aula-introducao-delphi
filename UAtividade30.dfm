@@ -21,7 +21,7 @@ object frmAtividade30: TfrmAtividade30
     Color = 16775156
     ParentBackground = False
     TabOrder = 0
-    ExplicitHeight = 368
+    ExplicitHeight = 359
     object sp_dados_usuario: TShape
       Left = 41
       Top = 18
@@ -102,6 +102,7 @@ object frmAtividade30: TfrmAtividade30
     Top = 0
     Width = 338
     Height = 376
+    BevelOuter = bvNone
     Color = 16775156
     ParentBackground = False
     TabOrder = 1
@@ -275,6 +276,7 @@ object frmAtividade30: TfrmAtividade30
       Height = 33
       Caption = 'Limpar'
       TabOrder = 0
+      OnClick = btn_limparClick
     end
   end
 end

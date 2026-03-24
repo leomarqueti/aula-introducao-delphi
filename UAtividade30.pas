@@ -34,6 +34,7 @@ type
     lbl_texto_nome_impresso: TLabel;
     btn_limpar: TButton;
     procedure btn_calcularClick(Sender: TObject);
+    procedure btn_limparClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -50,6 +51,15 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TfrmAtividade30.btn_limparClick(Sender: TObject);
+begin
+  lbl_salario_bruto.Caption := '';
+  lbl_salario_liquido.Caption := '';
+  lbl_imposto_renda.Caption := '';
+  lbl_sindicato.Caption := '';
+  lbl_inss.Caption := '';
+end;
 
 function  TfrmAtividade30.CalcularImposto(salarioBruto : real) : real;
 begin
