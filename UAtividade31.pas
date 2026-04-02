@@ -3,7 +3,8 @@ unit UAtividade31;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Buttons, Vcl.StdCtrls;
 
 type
@@ -20,9 +21,10 @@ type
     spSombraBotao: TShape;
     spSombraLogin: TShape;
     procedure btnAcessarClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
-    senha, senhaTexto, usuarioTexto , usuario : string;
+    senha, senhaTexto, usuarioTexto, usuario: string;
   public
     { Public declarations }
   end;
@@ -37,15 +39,12 @@ implementation
 procedure TfrmAtividade31.btnAcessarClick(Sender: TObject);
 begin
 
-  usuario := 'admin';
-  senha := '12345';
-
   usuarioTexto := edtUsuario.Text;
   senhaTexto := edtSenha.Text;
 
-  if (usuario <> usuarioTexto) or (senha <> senhaTexto ) then
+  if (usuario <> usuarioTexto) or (senha <> senhaTexto) then
   begin
-     ShowMessage('Senha ou Usuario Incorretos!');
+    ShowMessage('Senha ou Usuario Incorretos!');
   end
   else
   begin
@@ -54,6 +53,12 @@ begin
 
   edtSenha.Clear;
 
+end;
+
+procedure TfrmAtividade31.FormCreate(Sender: TObject);
+begin
+  usuario := 'admin';
+  senha := '12345';
 end;
 
 end.

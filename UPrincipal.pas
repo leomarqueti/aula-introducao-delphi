@@ -16,7 +16,6 @@ type
     btnAtividade03: TButton;
     btnAtividade27: TButton;
     btnAtividade28: TButton;
-    btnAtividade30: TButton;
     btnAtividade31: TButton;
     procedure btnExemplo01Click(Sender: TObject);
     procedure btnAtividade01Click(Sender: TObject);
@@ -25,8 +24,9 @@ type
     procedure btnAtividade03Click(Sender: TObject);
     procedure btnAtividade27Click(Sender: TObject);
     procedure btnAtividade28Click(Sender: TObject);
-    procedure btnAtividade30Click(Sender: TObject);
+
     procedure btnAtividade31Click(Sender: TObject);
+    procedure btnAtividade30Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -79,6 +79,9 @@ procedure TfrmPrincipal.btnExemplo02Click(Sender: TObject);
 begin
   frmExemplo02.ShowModal;
 end;
+
+
+
 
 procedure TfrmPrincipal.btnAtividade30Click(Sender: TObject);
 begin

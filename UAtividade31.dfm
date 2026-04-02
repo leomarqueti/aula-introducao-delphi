@@ -10,6 +10,7 @@ object frmAtividade31: TfrmAtividade31
   Font.Height = -19
   Font.Name = 'Segoe UI'
   Font.Style = []
+  OnCreate = FormCreate
   TextHeight = 25
   object pnlPrincipal: TPanel
     Left = 0
@@ -20,7 +21,8 @@ object frmAtividade31: TfrmAtividade31
     Color = 11588276
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = -8
+    ExplicitWidth = 359
+    ExplicitHeight = 378
     object lblTextoLogin: TLabel
       Left = 136
       Top = 32
