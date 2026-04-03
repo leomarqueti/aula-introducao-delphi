@@ -19,6 +19,7 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TfrmAtividade31, frmAtividade31);
   Application.CreateForm(TfrmExemplo01, frmExemplo01);
   Application.CreateForm(TfrmAtividade01, frmAtividade01);
   Application.CreateForm(TfrmExemplo02, frmExemplo02);
@@ -27,6 +28,5 @@ begin
   Application.CreateForm(TfrmAtividade27, frmAtividade27);
   Application.CreateForm(TfrmAtividade28, frmAtividade28);
   Application.CreateForm(TfrmAtividade30, frmAtividade30);
-  Application.CreateForm(TfrmAtividade31, frmAtividade31);
   Application.Run;
 end.
