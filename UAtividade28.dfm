@@ -31,9 +31,9 @@ object frmAtividade28: TfrmAtividade28
     object lbl_taxa_hora: TLabel
       Left = 64
       Top = 77
-      Width = 85
+      Width = 89
       Height = 17
-      Caption = 'Taxa por hora:'
+      Caption = 'Valor por hora:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
@@ -44,9 +44,9 @@ object frmAtividade28: TfrmAtividade28
     object lbl_configuracao_taxa: TLabel
       Left = 48
       Top = 32
-      Width = 186
+      Width = 165
       Height = 28
-      Caption = 'Configura'#231#227'o de Taxa'
+      Caption = 'Configura'#231#227'o Hora'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -20
@@ -148,7 +148,7 @@ object frmAtividade28: TfrmAtividade28
     object lbl_3: TLabel
       Left = 200
       Top = 14
-      Width = 41
+      Width = 9
       Height = 20
       Caption = '3'
       Font.Charset = DEFAULT_CHARSET
@@ -390,7 +390,7 @@ object frmAtividade28: TfrmAtividade28
     object lbl_5: TLabel
       Left = 373
       Top = 14
-      Width = 36
+      Width = 9
       Height = 20
       Caption = '5'
       Font.Charset = DEFAULT_CHARSET
@@ -403,7 +403,7 @@ object frmAtividade28: TfrmAtividade28
     object lbl_6: TLabel
       Left = 21
       Top = 93
-      Width = 36
+      Width = 9
       Height = 20
       Caption = '6'
       Font.Charset = DEFAULT_CHARSET
@@ -429,7 +429,7 @@ object frmAtividade28: TfrmAtividade28
     object lbl_8: TLabel
       Left = 199
       Top = 93
-      Width = 26
+      Width = 9
       Height = 20
       Caption = '8'
       Font.Charset = DEFAULT_CHARSET
@@ -442,7 +442,7 @@ object frmAtividade28: TfrmAtividade28
     object lbl_9: TLabel
       Left = 287
       Top = 93
-      Width = 34
+      Width = 9
       Height = 20
       Caption = '9'
       Font.Charset = DEFAULT_CHARSET
@@ -954,9 +954,9 @@ object frmAtividade28: TfrmAtividade28
       Shape = stRoundRect
     end
     object lbl_resultado: TLabel
-      Left = 80
-      Top = 108
-      Width = 6
+      Left = 40
+      Top = 106
+      Width = 49
       Height = 31
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText

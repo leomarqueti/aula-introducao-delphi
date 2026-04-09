@@ -111,6 +111,7 @@ type
     edt_30: TEdit;
     lbl_texto_resultado: TLabel;
     procedure btn_calcularClick(Sender: TObject);
+    procedure Somar();
   private
     { Private declarations }
   public
@@ -119,6 +120,7 @@ type
   dia1, dia2, dia3, dia4, dia5, dia6, dia7, dia8, dia9, dia10,
   dia11, dia12, dia13, dia14, dia15, dia16, dia17, dia18, dia19, dia20,
   dia21, dia22, dia23, dia24, dia25, dia26, dia27, dia28, dia29, dia30, resultado,soma: integer;
+  dia : string;
   end;
 
 var
@@ -127,6 +129,22 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TfrmAtividade28.Somar;
+var
+  i: Integer;
+  edt: TEdit;
+begin
+  soma := 0;
+
+  for i := 1 to 30 do
+  begin
+    edt := TEdit(FindComponent('edt_' + IntToStr(i)));
+
+    if Assigned(edt) then
+      soma := soma + StrToIntDef(edt.Text, 0);
+  end;
+end;
 
 procedure TfrmAtividade28.btn_calcularClick(Sender: TObject);
 begin
@@ -161,14 +179,14 @@ begin
     dia28 := StrToInt(edt_28.Text);
     dia29 := StrToInt(edt_29.Text);
     dia30 := StrToInt(edt_30.Text);
-    soma := dia1 + dia2 + dia3 + dia4 + dia5 + dia6 + dia7 + dia8 + dia9 + dia10 +
-        dia11 + dia12 + dia13 + dia14 + dia15 + dia16 + dia17 + dia18 + dia19 + dia20 +
-        dia21 + dia22 + dia23 + dia24 + dia25 + dia26 + dia27 + dia28 + dia29 + dia30;
+
+
+    Somar();
 
     resultado := soma * horasTrabalhadas;
 
 
-    lbl_resultado.Caption := IntToStr(resultado);
+    lbl_resultado.Caption := 'R$' + IntToStr(resultado);
 
 end;
 
