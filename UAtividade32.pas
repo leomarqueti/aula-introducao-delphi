@@ -34,7 +34,6 @@ implementation
 procedure TfrmAtividade32.btnMostrarCaixaTextoClick(Sender: TObject);
 begin
 resultadoMBox := MessageBox(Application.Handle,'Escolha uma opção','Caixa de mensagem',3);
-
    if (resultadoMBox = 6) then
    begin
       MessageBox(Application.Handle,'Voce apertou SIM','Caixa de mensagem',0);
@@ -51,7 +50,7 @@ end;
 
 procedure TfrmAtividade32.btnInputClick(Sender: TObject);
 begin
-    resultadoIBox := InputBox('Caixa de input', 'Digite o texto', '');
+  resultadoIBox := InputBox('Caixa de input', 'Digite o texto', '');
 
    MessageBox(Application.Handle,PChar(resultadoIBox),'Caixa de mensagem',0);
 end;

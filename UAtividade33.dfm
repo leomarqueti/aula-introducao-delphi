@@ -58,7 +58,7 @@ object frmAtividade33: TfrmAtividade33
     Left = 56
     Top = 211
     Width = 257
-    Height = 57
+    Height = 53
     TabOrder = 1
   end
   object edtHoraMes: TEdit
