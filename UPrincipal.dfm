@@ -2,7 +2,7 @@ object frmPrincipal: TfrmPrincipal
   Left = 0
   Top = 0
   Caption = 'Delphi'
-  ClientHeight = 587
+  ClientHeight = 679
   ClientWidth = 576
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -123,5 +123,14 @@ object frmPrincipal: TfrmPrincipal
     Caption = 'Atividade 33'
     TabOrder = 10
     OnClick = btnAtividade33Click
+  end
+  object btnAtividade46: TButton
+    Left = 48
+    Top = 592
+    Width = 153
+    Height = 41
+    Caption = 'Atividade 46'
+    TabOrder = 11
+    OnClick = btnAtividade46Click
   end
 end
