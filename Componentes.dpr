@@ -13,7 +13,9 @@ uses
   UAtividade30 in 'UAtividade30.pas' {frmAtividade30},
   UAtividade31 in 'UAtividade31.pas' {frmAtividade31},
   UAtividade33 in 'UAtividade33.pas' {frmAtividade33},
-  UAtividade32 in 'UAtividade32.pas' {frmAtividade32};
+  UAtividade32 in 'UAtividade32.pas' {frmAtividade32},
+  UEx_24 in 'UEx_24.pas' {frmEx_24},
+  UAtividade46 in 'UAtividade46.pas' {frmAtividade46};
 
 {$R *.res}
 
@@ -33,5 +35,7 @@ begin
   Application.CreateForm(TfrmAtividade31, frmAtividade31);
   Application.CreateForm(TfrmAtividade33, frmAtividade33);
   Application.CreateForm(TfrmAtividade32, frmAtividade32);
+  Application.CreateForm(TfrmEx_24, frmEx_24);
+  Application.CreateForm(TfrmAtividade46, frmAtividade46);
   Application.Run;
 end.
