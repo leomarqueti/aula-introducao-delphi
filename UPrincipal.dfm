@@ -2,8 +2,8 @@ object frmPrincipal: TfrmPrincipal
   Left = 0
   Top = 0
   Caption = 'Delphi'
-  ClientHeight = 679
-  ClientWidth = 576
+  ClientHeight = 662
+  ClientWidth = 570
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -126,11 +126,29 @@ object frmPrincipal: TfrmPrincipal
   end
   object btnAtividade46: TButton
     Left = 48
-    Top = 592
+    Top = 232
     Width = 153
     Height = 41
     Caption = 'Atividade 46'
     TabOrder = 11
     OnClick = btnAtividade46Click
+  end
+  object btnAtividade47: TButton
+    Left = 48
+    Top = 288
+    Width = 153
+    Height = 41
+    Caption = 'Atividade 47'
+    TabOrder = 12
+    OnClick = btnAtividade47Click
+  end
+  object btnAtividade48: TButton
+    Left = 48
+    Top = 348
+    Width = 153
+    Height = 42
+    Caption = 'Atividade 48'
+    TabOrder = 13
+    OnClick = btnAtividade48Click
   end
 end
