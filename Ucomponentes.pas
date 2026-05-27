@@ -28,10 +28,11 @@ type
     btnLimpar: TButton;
     procedure btnCadastrarClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure btnLimparClick(Sender: TObject);
   private
     { Private declarations }
-    nRegistro : Integer;
-
+    nRegistro: Integer;
+    procedure LimparCampos;
   public
     { Public declarations }
   end;
@@ -44,59 +45,65 @@ implementation
 
 {$R *.dfm}
 
-
+procedure TfrmCadastro.LimparCampos;
+begin
+  edtNome.Clear;
+  edtEndereco.Clear;
+  rbtMasc.Checked := False;
+  rbtFem.Checked := False;
+  cbbCidade.ItemIndex := -1;
+  cbbCidade.Text := '';
+  ccbMaca.Checked := False;
+  ccbBanana.Checked := False;
+  ccbUva.Checked := False;
+  ccbMorango.Checked := False;
+  ccbJaca.Checked := False;
+  ccbManga.Checked := False;
+  edtNome.SetFocus;
+end;
 
 procedure TfrmCadastro.btnCadastrarClick(Sender: TObject);
 var
-  nome, endereco, sexo, cidade : string;
-
+  nome, endereco, sexo, cidade, frutas: string;
 begin
+  nome     := edtNome.Text;
+  endereco := edtEndereco.Text;
+  cidade   := cbbCidade.Text;
+  sexo     := '';
 
-   nome := edtNome.Text;
-   endereco := edtEndereco.Text;
+  if rbtMasc.Checked then
+    sexo := 'Masculino'
+  else if rbtFem.Checked then
+    sexo := 'Feminino';
 
-   if rbtMasc.Checked then
-   begin
-     sexo := 'Masculino'
-   end;
+  if ccbMaca.Checked    then frutas := frutas + 'Maçã, ';
+  if ccbBanana.Checked  then frutas := frutas + 'Banana, ';
+  if ccbUva.Checked     then frutas := frutas + 'Uva, ';
+  if ccbMorango.Checked then frutas := frutas + 'Morango, ';
+  if ccbJaca.Checked    then frutas := frutas + 'Jaca, ';
+  if ccbManga.Checked   then frutas := frutas + 'Manga, ';
 
-   if rbtFem.Checked then
-   begin
-    sexo := 'Feminino'
-   end;
+  if frutas <> '' then
+    SetLength(frutas, Length(frutas) - 2)  // remove a última ", "
+  else
+    frutas := '(nenhuma)';
 
-   cidade := cbbCidade.Text;
+  Inc(numeroRegistro);
 
-   Inc(numeroRegistro);
+  mmoRegistros.Lines.Add('===== Registro #' + IntToStr(numeroRegistro) + ' =====');
+  mmoRegistros.Lines.Add('Nome......: ' + nome);
+  mmoRegistros.Lines.Add('Endereço..: ' + endereco);
+  mmoRegistros.Lines.Add('Sexo......: ' + sexo);
+  mmoRegistros.Lines.Add('Cidade....: ' + cidade);
+  mmoRegistros.Lines.Add('Frutas....: ' + frutas);
+  mmoRegistros.Lines.Add('--------------------------------');
+  mmoRegistros.Lines.Add('');
 
-   mmoRegistros.Lines.Add('Registro ' + IntToStr(numeroRegistro) + sLineBreak + 'Nome: ' + nome + sLineBreak +
-    'Endereço: ' + endereco + sLineBreak + 'Sexo: ' + Sexo + sLineBreak + 'Cidade: ' + cidade + sLineBreak
-   );
-
-   mmoRegistros.Lines.Add('--------------Frutas-------------');
-
-   if ccbMaca.Checked then
-    mmoRegistros.Lines.Add('Maçã');
-
-  if ccbBanana.Checked then
-    mmoRegistros.Lines.Add('Banana');
-
-  if ccbUva.Checked then
-    mmoRegistros.Lines.Add('Uva');
-
-  if ccbMorango.Checked then
-    mmoRegistros.Lines.Add('Morango');
-
-  if ccbJaca.Checked then
-    mmoRegistros.Lines.Add('Jaca');
-
-  if ccbManga.Checked then
-    mmoRegistros.Lines.Add('Manga');
-
-  edtNome.Clear;
-  edtEndereco.Clear;
-
-
+  LimparCampos;
+end;
+procedure TfrmCadastro.btnLimparClick(Sender: TObject);
+begin
+  mmoRegistros.Lines.Clear;
 end;
 
 procedure TfrmCadastro.FormCreate(Sender: TObject);

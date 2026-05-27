@@ -18,18 +18,11 @@ uses
   UAtividade46 in 'UAtividade46.pas' {frmAtividade46},
   UAtividade47 in 'UAtividade47.pas' {frmAtividade47},
   UAtividade48 in 'UAtividade48.pas' {frmAtividade48},
-<<<<<<< Updated upstream
+  UAtividade49 in 'UAtividade49.pas' {frmAtividade49},
   UAtividade50 in 'UAtividade50.pas' {frmAtividade50},
   UAtividade51 in 'UAtividade51.pas' {frmAtividade51},
   UAtividade52 in 'UAtividade52.pas' {frmAtividade52},
-  UAtividade49 in 'UAtividade49.pas' {frmAtividade49},
   Ucomponentes in 'Ucomponentes.pas' {frmCadastro};
-=======
-  UAtividade49 in 'UAtividade49.pas' {frmAtividade49},
-  UAtividade51 in 'UAtividade51.pas' {frmAtividade51},
-  UAtividade52 in 'UAtividade52.pas' {frmAtividade52},
-  UAtividade50 in 'UAtividade50.pas' {frmAtividade50};
->>>>>>> Stashed changes
 
 {$R *.res}
 
@@ -53,17 +46,11 @@ begin
   Application.CreateForm(TfrmAtividade46, frmAtividade46);
   Application.CreateForm(TfrmAtividade47, frmAtividade47);
   Application.CreateForm(TfrmAtividade48, frmAtividade48);
-<<<<<<< Updated upstream
+  Application.CreateForm(TfrmAtividade49, frmAtividade49);
   Application.CreateForm(TfrmAtividade50, frmAtividade50);
   Application.CreateForm(TfrmAtividade51, frmAtividade51);
   Application.CreateForm(TfrmAtividade52, frmAtividade52);
-  Application.CreateForm(TfrmAtividade49, frmAtividade49);
   Application.CreateForm(TfrmCadastro, frmCadastro);
-=======
-  Application.CreateForm(TfrmAtividade49, frmAtividade49);
-  Application.CreateForm(TfrmAtividade51, frmAtividade51);
-  Application.CreateForm(TfrmAtividade52, frmAtividade52);
-  Application.CreateForm(TfrmAtividade50, frmAtividade50);
->>>>>>> Stashed changes
+  Application.CreateForm(TfrmCadastro, frmCadastro);
   Application.Run;
 end.
